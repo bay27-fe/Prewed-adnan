@@ -13,6 +13,7 @@
       background: linear-gradient(to bottom right, #1f1c2c, #928dab);
       color: #f3f4f6;
       font-family: 'Open Sans', sans-serif;
+      overflow: hidden;
     }
     .glass {
       backdrop-filter: blur(30px);
@@ -22,81 +23,101 @@
     .hero-title {
       font-family: 'Great Vibes', cursive;
     }
+    #main-content {
+      display: none;
+    }
+    #loader {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(to bottom right, #1f1c2c, #928dab);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 50;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="text-center py-16 glass mx-4 mt-6 rounded-2xl shadow-2xl" data-aos="fade-down">
-    <h1 class="text-6xl text-white font-bold tracking-wide hero-title">Adnan & Dilla</h1>
-    <p class="text-2xl mt-4 text-pink-200 italic">Akan Menikah</p>
-    <p class="text-xl mt-2 text-gray-300">Sabtu, 20 Juli 2025</p>
-    <p id="countdown" class="text-md mt-3 text-blue-200 font-medium"></p>
-  </header>
+  <!-- Loader -->
+  <div id="loader">
+    <h1 class="text-3xl md:text-5xl text-white text-center font-bold animate-pulse">Selamat atas pernikahan</h1>
+  </div>
 
-  <main class="max-w-4xl mx-auto px-6 py-12">
+  <!-- Main content -->
+  <div id="main-content">
+    <header class="text-center py-16 glass mx-4 mt-6 rounded-2xl shadow-2xl" data-aos="fade-down">
+      <h1 class="text-6xl text-white font-bold tracking-wide hero-title">Adnan & Dilla</h1>
+      <p class="text-2xl mt-4 text-pink-200 italic">Akan Menikah</p>
+      <p class="text-xl mt-2 text-gray-300">Sabtu, 20 Juli 2025</p>
+      <p id="countdown" class="text-md mt-3 text-blue-200 font-medium"></p>
+    </header>
 
-    <section class="text-center mb-10" data-aos="fade-up">
-      <h2 class="text-3xl font-semibold mb-4 text-pink-200">Dengan Cinta dan Restu</h2>
-      <p class="text-lg text-gray-200">Kami mengundang Anda untuk merayakan hari istimewa kami bersama keluarga dan sahabat terkasih.</p>
-    </section>
+    <main class="max-w-4xl mx-auto px-6 py-12">
 
-    <section class="text-center mb-12" data-aos="fade-up">
-      <p class="italic text-pink-100 text-lg">
-        "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri..."
-        <br/> (QS. Ar-Rum: 21)
-      </p>
-    </section>
+      <section class="text-center mb-10" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold mb-4 text-pink-200">Dengan Cinta dan Restu</h2>
+        <p class="text-lg text-gray-200">Kami mengundang Anda untuk merayakan hari istimewa kami bersama keluarga dan sahabat terkasih.</p>
+      </section>
 
-    <section class="glass p-8 rounded-2xl shadow-xl mb-12 text-center" data-aos="fade-up">
-      <h3 class="text-2xl font-semibold mb-4 text-white">Detail Acara</h3>
-      <p class="text-xl text-gray-100">Akad: <span class="font-medium">Sabtu, 08.00 - 10.00 WIB</span></p>
-      <p class="text-xl text-gray-100 mt-2">Resepsi: <span class="font-medium">Minggu, 11.00 - 14.00 WIB</span></p>
-      <p class="text-lg text-gray-300 mt-4">Kedai Ibu, Jl. Utama Gg. Pelita Taqwa, Pekanbaru</p>
-      <a href="https://maps.app.goo.gl/6s1XA23MF6HbjnGG6" target="_blank"
-         class="block mt-4 text-blue-300 underline hover:text-blue-100">Lihat Lokasi</a>
-    </section>
+      <section class="text-center mb-12" data-aos="fade-up">
+        <p class="italic text-pink-100 text-lg">
+          "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri..."
+          <br/> (QS. Ar-Rum: 21)
+        </p>
+      </section>
 
-    <section class="mb-12 text-center" data-aos="zoom-in">
-      <h3 class="text-2xl font-semibold mb-4 text-pink-200">Foto Prewedding</h3>
-      <div class="flex justify-center">
-        <img src="https://i.imgur.com/AGZabYW.jpeg" alt="Foto Prewedding" class="rounded-xl shadow-2xl w-full max-w-xl border border-white/30">
+      <section class="glass p-8 rounded-2xl shadow-xl mb-12 text-center" data-aos="fade-up">
+        <h3 class="text-2xl font-semibold mb-4 text-white">Detail Acara</h3>
+        <p class="text-xl text-gray-100">Akad: <span class="font-medium">Sabtu, 08.00 - 10.00 WIB</span></p>
+        <p class="text-xl text-gray-100 mt-2">Resepsi: <span class="font-medium">Minggu, 11.00 - 14.00 WIB</span></p>
+        <p class="text-lg text-gray-300 mt-4">Kedai Ibu, Jl. Utama Gg. Pelita Taqwa, Pekanbaru</p>
+        <a href="https://maps.app.goo.gl/6s1XA23MF6HbjnGG6" target="_blank"
+           class="block mt-4 text-blue-300 underline hover:text-blue-100">Lihat Lokasi</a>
+      </section>
+
+      <section class="mb-12 text-center" data-aos="zoom-in">
+        <h3 class="text-2xl font-semibold mb-4 text-pink-200">Foto Prewedding</h3>
+        <div class="flex justify-center">
+          <img src="https://i.imgur.com/AGZabYW.jpeg" alt="Foto Prewedding" class="rounded-xl shadow-2xl w-full max-w-xl border border-white/30">
+        </div>
+      </section>
+
+      <section class="glass p-8 rounded-2xl shadow-xl text-center" data-aos="fade-up">
+        <h3 class="text-2xl font-semibold mb-4 text-white">Kirim Ucapan</h3>
+        <form class="flex flex-col gap-4 max-w-md mx-auto">
+          <input type="text" placeholder="Nama Anda" class="p-3 rounded bg-white/80 text-black placeholder-gray-500" />
+          <textarea placeholder="Ucapan..." rows="4" class="p-3 rounded bg-white/80 text-black placeholder-gray-500"></textarea>
+          <button type="submit"
+            class="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-2 rounded hover:opacity-90 transition">
+            Kirim
+          </button>
+        </form>
+      </section>
+
+      <div class="mt-10 text-center" data-aos="fade-up">
+        <a href="https://api.whatsapp.com/send?text=Hai%2C%20saya%20mengundang%20Anda%20ke%20pernikahan%20Adnan%20dan%20Dilla!%20Cek%20undangannya%20di%20https%3A%2F%2Fnamadomainanda.com"
+           target="_blank"
+           class="inline-block bg-green-500 text-white py-2 px-6 rounded-full text-lg hover:bg-green-600 transition">
+          Bagikan via WhatsApp
+        </a>
       </div>
-    </section>
 
-    <section class="glass p-8 rounded-2xl shadow-xl text-center" data-aos="fade-up">
-      <h3 class="text-2xl font-semibold mb-4 text-white">Kirim Ucapan</h3>
-      <form class="flex flex-col gap-4 max-w-md mx-auto">
-        <input type="text" placeholder="Nama Anda" class="p-3 rounded bg-white/80 text-black placeholder-gray-500" />
-        <textarea placeholder="Ucapan..." rows="4" class="p-3 rounded bg-white/80 text-black placeholder-gray-500"></textarea>
-        <button type="submit"
-          class="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-2 rounded hover:opacity-90 transition">
-          Kirim
-        </button>
-      </form>
-    </section>
+    </main>
 
-    <div class="mt-10 text-center" data-aos="fade-up">
-      <a href="https://api.whatsapp.com/send?text=Hai%2C%20saya%20mengundang%20Anda%20ke%20pernikahan%20Adnan%20dan%20Dilla!%20Cek%20undangannya%20di%20https%3A%2F%2Fnamadomainanda.com"
-         target="_blank"
-         class="inline-block bg-green-500 text-white py-2 px-6 rounded-full text-lg hover:bg-green-600 transition">
-        Bagikan via WhatsApp
-      </a>
-    </div>
+    <footer class="text-center py-6 text-sm text-gray-300" data-aos="fade-up">
+      &copy; 2025 Adnan & Dilla. Dibuat dengan cinta oleh Caretaker.
+    </footer>
+  </div>
 
-  </main>
-
-  <footer class="text-center py-6 text-sm text-gray-300" data-aos="fade-up">
-    &copy; 2025 Adnan & Dilla. Dibuat dengan cinta oleh Caretaker.
-  </footer>
-
-  <!-- Musik piano lembut no copyright -->
+  <!-- Musik romantis piano lembut -->
   <audio autoplay loop>
     <source src="https://cdn.pixabay.com/download/audio/2022/10/20/audio_fdeae3d4f2.mp3" type="audio/mpeg">
     Browser Anda tidak mendukung pemutar audio.
   </audio>
 
   <script>
+    // Countdown logic
     const eventDate = new Date("2025-07-20T08:00:00").getTime();
     setInterval(() => {
       const now = new Date().getTime();
@@ -106,7 +127,15 @@
         Math.floor(distance / (1000 * 60 * 60 * 24)) + " hari lagi";
     }, 1000);
 
-    AOS.init();
+    // Loading screen timeout
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("main-content").style.display = "block";
+        document.body.style.overflow = "auto";
+        AOS.init({ duration: 1000, once: true });
+      }, 5000);
+    });
   </script>
 </body>
 </html>
